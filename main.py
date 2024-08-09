@@ -11,7 +11,6 @@ payload = {"nTqum": "", "lang": "ru"}
 def main():
     for location in locations:
         url = f"{base_url}{location}"
-
         response = requests.get(url, params=payload)
         response.raise_for_status()
         print(response.text)
